@@ -1,0 +1,301 @@
+Solution,Filter_material,Filter_loading,Pore_size,Effective_Area,Duration,Volume,Pressure drop,Max_Flux,Volumetric_Flux,Permiability,Starting Flux,Flow_Rate,Mean_flow_resistance,Concentration,Source
+Wort,polytetrafluoroethylene (PTFE),,0.1,,30,,3,,,20000,,0.1666666667,,0.081,https://doi.org/10.1002/j.2050-0416.2005.tb00223.x
+Wort,polytetrafluoroethylene (PTFE),,0.2,,30,,3,,,14000,,0.1666666667,,0.081,https://doi.org/10.1002/j.2050-0416.2005.tb00223.x
+Wort,polyamide(PA),,0.04,,30,,3,,,5800,,0.1666666667,,0.081,https://doi.org/10.1002/j.2050-0416.2005.tb00223.x
+Wort,polyamide(PA),,0.1,,30,,3,,,13800,,0.1666666667,,0.081,https://doi.org/10.1002/j.2050-0416.2005.tb00223.x
+Wort,polyamide(PA),,0.2,,30,,3,,,7400,,0.1666666667,,0.081,https://doi.org/10.1002/j.2050-0416.2005.tb00223.x
+Wort,polyamide(PA),,0.45,,30,,3,,,6800,,0.1666666667,,0.081,https://doi.org/10.1002/j.2050-0416.2005.tb00223.x
+Rough Non-alcholic Beer (RB),cellulose acetate (CA),0.056,0.2,3.46,90,10463.04,1,"5,980",,2016,79,1162.56,,1014.9,https://doi.org/10.1094/ASBCJ-2010-0315-01
+Rough Non-alcholic Beer (RB),cellulose acetate (CA),0.0814,0.45,3.46,90,15206.7,1,8256,,2930,100,1689.633333,,1014.9,https://doi.org/10.1094/ASBCJ-2010-0315-01
+Rough Non-alcholic Beer (RB),cellulose acetate (CA),0.3386,0.8,3.46,90,63271.29,1,38961,,12191,181,7030.143333,,1014.9,https://doi.org/10.1094/ASBCJ-2010-0315-01
+Rough Non-alcholic Beer (RB),cellulose acetate (CA),0.3513,1.2,3.46,90,65637.93,1,51668,,12647,181,7293.103333,,1014.9,https://doi.org/10.1094/ASBCJ-2010-0315-01
+Rough Non-alcholic Beer (RB),cellulose nitrate (CN),0.079,0.45,3.46,90,14760.36,1,7511,,2844,75,1640.04,,1014.9,https://doi.org/10.1094/ASBCJ-2010-0315-01
+Rough Non-alcholic Beer (RB),nylon (NY),0.0483,0.45,3.46,90,9030.6,1,3795,,1740,63,1003.4,,1014.9,https://doi.org/10.1094/ASBCJ-2010-0315-01
+Rough Non-alcholic Beer (RB),polytetrafluoroethylene (PTFE),0,0.45,3.46,90,0,1,0,,0,0,0,,1014.9,https://doi.org/10.1094/ASBCJ-2010-0315-01
+Rough Non-alcholic Beer (RB),cellulose acetate (CA),0.1905,0.45,3.46,90,71175.66,2,18327,,6857,82,3954.203333,,1014.9,https://doi.org/10.1094/ASBCJ-2010-0315-01
+Rough Non-alcholic Beer (RB),cellulose nitrate (CN),0.1564,0.45,3.46,90,58449.78,2,12326,,5631,91,3247.21,,1014.9,https://doi.org/10.1094/ASBCJ-2010-0315-01
+Rough Non-alcholic Beer (RB),nylon (NY),0.1864,0.45,3.46,90,69670.56,2,15323,,6712,85,3870.586667,,1014.9,https://doi.org/10.1094/ASBCJ-2010-0315-01
+Rough Non-alcholic Beer (RB),polytetrafluoroethylene (PTFE),0.000583,0.45,3.46,90,217.98,2,120,,21,27,12.11,,1014.9,https://doi.org/10.1094/ASBCJ-2010-0315-01
+Bakers Yeast and Water,polyethersulfone (PES),,0.45,15.9,377.36,,0.2,,,10,,0.265,1.78x10^10 m^-1,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.45,15.9,269.54,,0.5,,,14,,0.371,1.78x10^10 m^-1,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.45,15.9,209.64,,1,,,18,,0.477,1.78x10^10 m^-1,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.45,15.9,188.68,,1.5,,,20,,0.53,1.78x10^10 m^-1,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.45,15.9,198.61,,2,,,19,,0.504,1.78x10^10 m^-1,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.2,15.9,377.36,,0.2,,,10,,0.265,3.81x10^10 m^-1,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.2,15.9,269.54,,0.5,,,14,,0.371,3.81x10^10 m^-1,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.2,15.9,209.64,,1,,,18,,0.477,3.81x10^10 m^-1,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.2,15.9,188.68,,1.5,,,20,,0.53,3.81x10^10 m^-1,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.2,15.9,198.61,,2,,,19,,0.504,3.81x10^10 m^-1,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.45,15.9,377.36,,0.2,,,10,,0.265,1.78x10^10 m^-1,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.45,15.9,269.54,,0.5,,,14,,0.371,3.81x10^10 m^-1,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.2,15.9,209.64,,1,,,18,,0.477,,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.45,15.9,188.68,,1.5,,,20,,0.53,,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.45,15.9,198.61,,2,,,19,,0.504,,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.2,15.9,377.36,,0.2,,,10,,0.265,1.78x10^10 m^-1,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.45,15.9,269.54,,0.5,,,14,,0.371,3.81x10^10 m^-1,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.2,15.9,209.64,,1,,,18,,0.477,,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.2,15.9,188.68,,1.5,,,20,,0.53,,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.2,15.9,198.61,,2,,,19,,0.504,,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.2,15.9,377.36,,0.2,,,10,,0.265,1.78x10^10 m^-1,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.2,15.9,269.54,,0.5,,,14,,0.371,3.81x10^10 m^-1,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.2,15.9,209.64,,1,,,18,,0.477,,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.45,15.9,188.68,,1.5,,,20,,0.53,,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.2,15.9,198.61,,2,,,19,,0.504,,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.2,15.9,377.36,,0.2,,,10,,0.265,1.78x10^10 m^-1,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.2,15.9,269.54,,0.5,,,14,,0.371,3.81x10^10 m^-1,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.45,15.9,209.64,,1,,,18,,0.477,,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.2,15.9,188.68,,1.5,,,20,,0.53,,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.45,15.9,198.61,,2,,,19,,0.504,,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.45,15.9,377.36,,0.2,,,10,,0.265,1.78x10^10 m^-1,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.2,15.9,269.54,,0.5,,,14,,0.371,3.81x10^10 m^-1,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.45,15.9,209.64,,1,,,18,,0.477,,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.45,15.9,188.68,,1.5,,,20,,0.53,,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.45,15.9,198.61,,2,,,19,,0.504,,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Bakers Yeast and Water,polyethersulfone (PES),,0.45,15.9,377.36,,0.2,,,10,,9.265,1.78x10^10 m^-1,3,https://doi.org/10.1016/j.memsci.2006.03.043 
+Comerical Beer with Bacteria,nylon (NY),,3,96,100,,1.5,,,0.0625,,1,23(m/kg),0.153,https://doi.org/10.1016/j.jfoodeng.2015.02.005
+Water with Bacteria,nylon (NY),,3,96,100,,1,,,0.0625,,1,29.9,0.153,https://doi.org/10.1016/j.jfoodeng.2015.02.005
+Comerical Beer with Bacteria,nylon (NY),,3,96,100,,1.5,,,0.0625,,1,9.05,0.000003,https://doi.org/10.1016/j.jfoodeng.2015.02.005
+Water with Bacteria,nylon (NY),,3,96,100,,1,,,0.0625,,1,31.8,0.000003,https://doi.org/10.1016/j.jfoodeng.2015.02.005
+Comerical Beer with Bacteria,nylon (NY),,3,96,100,,1.5,,,0.0625,,1,45.3,0.24,https://doi.org/10.1016/j.jfoodeng.2015.02.005
+Water with Bacteria,nylon (NY),,3,96,100,,1,,,0.0625,,1,53.3,0.24,https://doi.org/10.1016/j.jfoodeng.2015.02.005
+Comerical Beer with Bacteria,nylon (NY),,3,96,100,,1.5,,,0.0625,,1,3.86,0.087,https://doi.org/10.1016/j.jfoodeng.2015.02.005
+Water with Bacteria,nylon (NY),,3,96,100,,1,,,0.0625,,1,9.66,0.087,https://doi.org/10.1016/j.jfoodeng.2015.02.005
+BSA,polycarbonate (PC),0.012,0.2,49.09,60,,0.14,432,,,432,3534.48,,2,https://doi.org/10.1016/S0376-7388(98)00324-X
+BSA,polycarbonate (PC),0.046,0.2,49.09,60,,0.14,1656,,,1656,13548.84,,2,https://doi.org/10.1016/S0376-7388(98)00324-X
+BSA,polyester,0.04,0.2,49.09,60,,0.14,1440,,,1440,11781.6,,2,https://doi.org/10.1016/S0376-7388(98)00324-X
+BSA,aluminum,0.018,0.2,49.09,60,,0.14,648,,,648,5301.72,,2,https://doi.org/10.1016/S0376-7388(98)00324-X
+BSA,polyvinylidene fluoride (PVDF),0.022,0.22,49.09,60,,0.14,792,,,792,6479.88,,2,https://doi.org/10.1016/S0376-7388(98)00324-X
+BSA,cellulose esters,0.058,0.22,49.09,60,,0.14,2088,,,2088,17083.32,,2,https://doi.org/10.1016/S0376-7388(98)00324-X
+BSA,cellulose acetate (CA),0.045,0.2,49.09,60,,0.14,1620,,,1620,13254.3,,2,https://doi.org/10.1016/S0376-7388(98)00324-X
+BSA,polyethersulfone (PES),0.044,0.16,49.09,60,,0.14,"1,584.00",,,1584,12959.76,,2,https://doi.org/10.1016/S0376-7388(98)00324-X
+Green Tea Extract,cellulose triacetate (CT),,5,34,20,,0.5,"417,600,000.00",,,417600000,5000,,0.76,https://doi.org/10.1271/bbb.59.1016
+Green Tea Extract,cellulose triacetate (CT),,5,34,20,,0.5,"1,886,400,000.00",,,"1,886,400,000.00",5000,,0.76,https://doi.org/10.1271/bbb.59.1016
+Green Tea Extract,cellulose triacetate (CT),,5,34,20,,0.5,"1,605,600,000.00",,,"1,605,600,000.00",5000,,0.76,https://doi.org/10.1271/bbb.59.1016
+Green Tea Extract,cellulose triacetate (CT),,1.2,34,20,,0.5,"1,180,800,000.00",,,"1,180,800,000.00",5000,,0.76,https://doi.org/10.1271/bbb.59.1016
+Green Tea Extract,cellulose triacetate (CT),,0.22,34,20,,0.5,349200000,,,349200000,5000,,0.76,https://doi.org/10.1016/j.seppur.2016.05.029
+Green Tea Extract,cellulose acetate (CA),0.0111,0.8,0.64,60,,0.7,401.01,,,401.01,42.8,,61.08,https://doi.org/10.1016/j.seppur.2016.05.029
+Green Tea Extract,cellulose acetate (CA),0.0056,0.3,0.64,60,,0.7,203.03,,,203.03,21.7,,61.08,https://doi.org/10.1016/j.seppur.2016.05.029
+Green Tea Extract,cellulose acetate (CA),0.0049,0.22,0.64,60,,0.7,174.74,,,174.74,18.6,,61.08,https://doi.org/10.1016/j.seppur.2016.05.029
+Artichoke Bract Extract,polyvinylidene fluoride (PVDF),0.016,0.2,50.24,25,,1,577.23,,,577.23,4833,,25,https://doi.org/10.1016/j.jfoodeng.2016.02.018
+Artichoke Bract Extract,polyvinylidene fluoride (PVDF),0.0257,0.2,50.24,25,,2,924,,,924,7737,,25,https://doi.org/10.1016/j.jfoodeng.2016.02.018
+Artichoke Bract Extract,polyvinylidene fluoride (PVDF),0.026,0.2,50.24,25,,3,935.62,,,935.62,7834,,25,https://doi.org/10.1016/j.jfoodeng.2016.02.018
+Artichoke Bract Extract,polyethersulfone (PES),0.0058,0.05,50.24,25,,1,209.48,,,209.48,1754,,25,https://doi.org/10.1016/j.jfoodeng.2016.02.018
+Artichoke Bract Extract,polyethersulfone (PES),0.0113,0.05,50.24,25,,2,408.05,,,408.05,3417,,25,https://doi.org/10.1016/j.jfoodeng.2016.02.018
+Artichoke Bract Extract,polyethersulfone (PES),0.0119,0.05,50.24,25,,3,427.04,,,427.04,3576,,25,https://doi.org/10.1016/j.jfoodeng.2016.02.018
+Chicory Juice,polyvinylidene fluoride (PVDF),,0.15,0.317,40,,0.75,,,40.72,,2000,,7.375,https://doi.org/10.1016/j.jfoodeng.2012.10.028
+Chicory Juice,polyvinylidene fluoride (PVDF),,0.2,0.317,40,,0.75,,,41.92,,2000,,7.375,https://doi.org/10.1016/j.jfoodeng.2012.10.028
+Chicory Juice,polyvinylidene fluoride (PVDF),,0.45,0.317,40,,0.75,,,42.52,,2000,,7.375,https://doi.org/10.1016/j.jfoodeng.2012.10.028
+Comerical Beer,cellulose acetate (CA),0.042,0.22,4.91,180,,1.96,1511,,,1511,150,,1.417,https://doi.org/10.1016/S0376-7388(99)00261-6
+Comerical Beer,cellulose acetate (CA),0.0506,0.22,4.91,180,,1.96,1820,,,1820,150,,0.84,https://doi.org/10.1016/S0376-7388(99)00261-6
+White Wine,cellulose acetate (CA),0.1245,0.22,4.91,180,,1.96,4483,,,4483,150,,0.224,https://doi.org/10.1016/S0376-7388(99)00261-6
+White Wine,cellulose acetate (CA),0.0643,0.22,4.91,180,,1.96,2314,,,2314,150,,0.29,https://doi.org/10.1016/S0376-7388(99)00261-6
+Comerical Beer,polycarbonate (PC),0.0418,0.22,4.91,180,,1.96,1505,,,1505,150,,1.417,https://doi.org/10.1016/S0376-7388(99)00261-6
+Comerical Beer,polycarbonate (PC),0.0293,0.22,4.91,180,,1.96,1054,,,1054,150,,0.84,https://doi.org/10.1016/S0376-7388(99)00261-6
+White Wine,polycarbonate (PC),0.1157,0.22,4.91,180,,1.96,4164,,,4164,150,,0.224,https://doi.org/10.1016/S0376-7388(99)00261-6
+White Wine,polycarbonate (PC),0.1035,0.22,4.91,180,,1.96,3725,,,3725,150,,0.29,https://doi.org/10.1016/S0376-7388(99)00261-6
+Apple Juice,nylon (NY),0.0145,0.2,15.55,60,,3.446,522.96,,,522.96,1355,,120,https://doi.org/10.1016/S0376-7388(97)00239-1
+Apple Juice,polysulfone (PS),0.0042,0.2,15.55,80,,3.446,150.66,,,150.66,390,,120,https://doi.org/10.1016/S0376-7388(97)00239-1
+Apple Juice,polyvinylidene fluoride (PVDF),0.0613,0.2,15.55,80,,3.446,2206.25,,,2206.25,5718,,120,https://doi.org/10.1016/S0376-7388(97)00239-1
+Apple Juice,polyethersulfone (PES),0.0951,0.2,15.55,80,,3.446,3422.79,,,3422.79,8871,,120,https://doi.org/10.1016/S0376-7388(97)00239-1
+Clay Powder in Water,cellulose acetate (CA),,0.2,,66.67,,0.3,,,0.000508,,32.7,,0.01,https://doi.org/10.1016/j.cherd.2008.06.005
+Clay Powder in Water,cellulose acetate (CA),,0.2,,66.66,,0.3,,,0.000342,,22,,0.01,https://doi.org/10.1016/j.cherd.2008.06.005
+Clay Powder in Water,cellulose acetate (CA),,0.2,,66.66,,0.3,,,0.000042,,2.71,,0.01,https://doi.org/10.1016/j.cherd.2008.06.005
+Clay Powder in Water,cellulose esters,,8,,70.83,,0.3,,,0.00281,,180.6,,0.01,https://doi.org/10.1016/j.cherd.2008.06.005
+Clay Powder in Water,cellulose esters,,8,,70.83,,0.3,,,0.00231,,148.8,,0.01,https://doi.org/10.1016/j.cherd.2008.06.005
+Clay Powder in Water,cellulose esters,,8,,70.83,,0.3,,,0.0017,,109.8,,0.01,https://doi.org/10.1016/j.cherd.2008.06.005
+Clay Powder in Water,cellulose esters,,8,,70.83,,0.3,,,0.000748,,48.1,,0.01,https://doi.org/10.1016/j.cherd.2008.06.005
+Clay Powder in Water,cellulose esters,,8,,70.83,,0.3,,,0.0000883,,5.68,,0.01,https://doi.org/10.1016/j.cherd.2008.06.005
+Saline Solution,polyethersulfone (PES),0.00035,0.04,12,,,,12.6,12.6,,,432,,40,https://doi.org/10.1016/j.memsci.2012.03.031
+Saline Solution,polyethersulfone (PES),0.001136,0.04,12,,,,40.9,40.9,,,432,,40,https://doi.org/10.1016/j.memsci.2012.03.031
+Saline Solution,polyethersulfone (PES),0.001261,0.04,25,,,,45.4,45.4,1436,,2400,,40,https://doi.org/10.1016/j.memsci.2012.03.031
+Saline Solution,polyethersulfone (PES),0.001853,0.04,25,3240,,,66.7,66.7,1436,,2400,,40,https://doi.org/10.1016/j.memsci.2012.03.031
+BSA,ceramic,0.001806,0.05,15,45,,,450,65,,290,,,0.006,https://doi.org/10.1021/acsestwater.4c00473
+Misc Organic Matter,ceramic,0.005417,0.05,15,28,,,360,195,,360,,,,https://doi.org/10.1021/acsestwater.4c00473
+Misc Organic Matter,polyethersulfone (PES),0.03111,0.1,3.5,60,392,0.5,1800,1120,3600,1800,6.53,,,https://doi.org/10.1016/j.bej.2024.109358
+Misc Organic Matter,(CVGL),0.01556,0.22,3.5,60,196,1,1200,560,1200,1200,3.27,,,https://doi.org/10.1016/j.bej.2024.109358
+Silica,polytetrafluoroethylene (PTFE),0.0007778,0.2,9,1200,,,35,28,,35,400,,1,https://doi.org/10.1016/j.desal.2022.115554
+Silica,polytetrafluoroethylene (PTFE),0.0006611,0.2,9,1200,,,35,23.8,,35,400,,1,https://doi.org/10.1016/j.desal.2022.115554
+BSA,Ultrafiltration Membrane (MWCO 1 kDa),0.002083,0.0015,19.6,,29.4,0.98,,75,76.5,,2.45,"4,500,000,000,000,000.00",6,"FILTRATION, 17(2), 2017"
+BSA,Ultrafiltration Membrane (MWCO 1 kDa),0.003222,0.0015,19.6,,29.4,3.92,,116,29.6,,3.79,"12,000,000,000,000,000.00",6,"FILTRATION, 17(2), 2017"
+Yeast,ceramic,0.0006944,0.3,145,30,32,0.5,39,25,50,39,6.04,120000000,5.2,https://doi.org/10.1016/j.desal.2007.11.011
+Yeast,ceramic,0.001014,0.3,145,30,58,2.5,85,36.5,14.6,85,8.82,480000000,5.2,https://doi.org/10.1016/j.desal.2007.11.011
+BSA,polyethersulfone (PES),0.0008333,0.005,1.96,240,29.4,0.98,,30,30.6,,0.098,,10,https://doi.org/10.1016/j.cej.2012.01.007
+BSA,polyethersulfone (PES),0.002381,0.005,1.96,240,29.4,0.98,,85.7,87.4,,0.28,,10,https://doi.org/10.1016/j.cej.2012.01.007
+Silica,polyethersulfone (PES),0.01167,0.2,2.5,,,0.2,2200,420,2100,2200,0.175,,0.002,http://dx.doi.org/10.1016/j.memsci.2016.01.032
+Silica,polyethersulfone (PES),0.03222,0.2,2.5,,,0.2,2200,1160,5800,2200,0.483,,0.002,http://dx.doi.org/10.1016/j.memsci.2016.01.032
+Water with bacteria,polyethersulfone (PES),0.002567,0.005,41.8,12,,0.86,230,92.4,107.4,230,6.44,,0.56,https://doi.org/10.1016/j.seppur.2008.06.011
+Water with bacteria,polyethersulfone (PES),0.003278,0.005,41.8,12,,4.3,350,118,27.4,350,8.22,,0.56,https://doi.org/10.1016/j.seppur.2008.06.011
+Latex,polycarbonate (PC),0.01811,0.4,13.8,66.7,1120,0.0302,2243,652,21589,2243,15,,0.00063,https://doi.org/10.1016/S0376-7388(02)00252-1
+Latex,polycarbonate (PC),0.01086,0.4,13.8,8.33,200,0.0157,652,391,24904,652,9,,0.1,https://doi.org/10.1016/S0376-7388(02)00252-1
+Yeast,polyethersulfone (PES),NOT_EXTRACTABLE,0.1,28,,,1.2,,,,,,"260,000,000,000,000.00",0.3,https://doi.org/10.1080/19443994.2014.983178
+Yeast,polyethersulfone (PES),NOT_EXTRACTABLE,0.1,28,,,1.2,,,,,,"412,000,000,000,000.00",0.5,https://doi.org/10.1080/19443994.2014.983178
+Yeast,polyethersulfone (PES),NOT_EXTRACTABLE,0.1,28,,,1.2,,,,,,"512,000,000,000,000.00",1,https://doi.org/10.1080/19443994.2014.983178
+Yeast,polyethersulfone (PES),NOT_EXTRACTABLE,0.1,28,,,1.2,,,,,,"478,000,000,000,000.00",1.5,https://doi.org/10.1080/19443994.2014.983178
+Yeast,polyethersulfone (PES),NOT_EXTRACTABLE,0.1,28,,,1.2,,,,,,"445,000,000,000,000.00",2,https://doi.org/10.1080/19443994.2014.983178
+Yeast,polyethersulfone (PES),NOT_EXTRACTABLE,0.1,28,,,0.4,,,,,,"258,000,000,000,000.00",2,https://doi.org/10.1080/19443994.2014.983178
+Yeast,polyethersulfone (PES),NOT_EXTRACTABLE,0.1,28,,,0.6,,,,,,"356,000,000,000,000.00",2,https://doi.org/10.1080/19443994.2014.983178
+Yeast,polyethersulfone (PES),1.00E-04,0.1,28,60,0.018,0.8,70.2,3.6,4.5,70.2,0.168,"402,000,000,000,000.00",6,https://doi.org/10.1080/19443994.2014.983178
+Yeast,polyethersulfone (PES),NOT_EXTRACTABLE,0.1,28,,,1,,,,,,"412,000,000,000,000.00",2,https://doi.org/10.1080/19443994.2014.983178
+Yeast,polyethersulfone (PES),NOT_EXTRACTABLE,0.1,28,,,1.2,,,,,,"540,000,000,000,000.00",2,https://doi.org/10.1080/19443994.2014.983178
+Yeast,polyethersulfone (PES),NOT_EXTRACTABLE,0.1,28,,,1.2,,,,,,"405,000,000,000,000.00",2,https://doi.org/10.1080/19443994.2014.983178
+Yeast,polyethersulfone (PES),NOT_EXTRACTABLE,0.1,28,,,1.2,,,,,,"370,000,000,000,000.00",2,https://doi.org/10.1080/19443994.2014.983178
+Yeast,polyethersulfone (PES),NOT_EXTRACTABLE,0.1,28,,,1.2,,,,,,"368,000,000,000,000.00",2,https://doi.org/10.1080/19443994.2014.983178
+Water,polysulfone (PS),0.0062600000,0.014,14.6,,,2,450.8,225.4,225.4,107.8,54.85,,0,https://doi.org/10.3390/en15165976
+Misc Organic Matter,polysulfone (PS),0.0000666667,0.014,14.6,300,10.5,0.5,29.6,2.4,4.8,29.6,0.0584,"2,400,000,000,000,000.00",1.09,https://doi.org/10.3390/en15165976
+Misc Organic Matter,polysulfone (PS),0.0000888889,0.014,14.6,300,17,1,35.2,3.2,3.2,35.2,0.0779,"5,250,000,000,000,000.00",1.09,https://doi.org/10.3390/en15165976
+Misc Organic Matter,polysulfone (PS),0.0001138889,0.014,14.6,300,23,1.5,38,4.1,2.73,38,0.0998,"9,500,000,000,000,000.00",1.09,https://doi.org/10.3390/en15165976
+Misc Organic Matter,polysulfone (PS),0.0001333333,0.014,14.6,300,26,2,46,4.8,2.4,46,0.1168,"9,550,000,000,000,000.00",1.09,https://doi.org/10.3390/en15165976
+Misc Organic Matter,polysulfone (PS),0.0002083333,0.014,14.6,240,,2,51.8,7.5,3.75,51.8,0.1825,,1.09,https://doi.org/10.3390/en15165976
+Misc Organic Matter,polyvinylidene fluoride (PVDF),0.0001861111,0.014,84000,525600,,0.5,64.64,6.7,13.4,64.64,9380,,4.37,https://doi.org/10.3390/en15165976
+Silica,cellulose,0.0058055560,0.04,45.36,20,300,1,220,209,209,220,15.8,"1,900,000.00",0.1,https://doi.org/10.3390/membranes13050476
+Colloidal Al2O3,cellulose,0.0050111110,0.04,45.36,25,300,1,220,180.4,180.4,220,13.6,"2,800,000.00",0.1,https://doi.org/10.3390/membranes13050476
+Sodium Alginate,cellulose,0.0042777780,0.04,45.36,35,300,1,220,154,154,220,11.6,"4,100,000.00",0.01,https://doi.org/10.3390/membranes13050476
+"Sodium Alginate, Silica",cellulose,0.0025055560,0.04,45.36,55,300,1,220,90.2,90.2,220,6.82,"5,100,000.00",0.11,https://doi.org/10.3390/membranes13050476
+"Sodium Alginate, Colloidal Al2O3",cellulose,0.0019555560,0.04,45.36,70,300,1,220,70.4,70.4,220,5.32,"6,500,000.00",0.11,https://doi.org/10.3390/membranes13050476
+BSA,cellulose,0.0031166670,0.04,45.36,45,300,1,220,112.2,112.2,220,8.48,"5,800,000.00",0.01,https://doi.org/10.3390/membranes13050476
+"BSA, Silica",cellulose,0.0013444440,0.04,45.36,90,300,1,220,48.4,48.4,220,3.66,"6,800,000.00",0.11,https://doi.org/10.3390/membranes13050476
+"BSA, Colloidal Al2O3",cellulose,0.0009166667,0.04,45.36,110,300,1,220,33,33,220,2.5,"7,900,000.00",0.11,https://doi.org/10.3390/membranes13050476
+Sodium Alginate,polyvinylidene fluoride (PVDF),0.0005000000,0.1,9.08,,,0.49,360,18,36.7,360,0.272,,0.05,https://doi.org/10.3390/separations11030070
+Sodium Alginate,polyvinylidene fluoride (PVDF),0.0003333333,0.1,9.08,,,0.49,360,12,24.5,360,0.182,,0.05,https://doi.org/10.3390/separations11030070
+Sodium Alginate,polytetrafluoroethylene (PTFE),0.0004444444,0.1,9.08,,,0.49,360,16,32.7,360,0.242,,0.05,https://doi.org/10.3390/separations11030070
+Sodium Alginate,polytetrafluoroethylene (PTFE),0.0002500000,0.1,9.08,,,0.49,360,9,18.4,360,0.136,,0.05,https://doi.org/10.3390/separations11030070
+Sodium Alginate,cellulose,0.0006111111,0.1,9.08,,,0.49,360,22,44.9,360,0.333,,0.05,https://doi.org/10.3390/separations11030070
+Pectin,polyvinylidene fluoride (PVDF),0.0010000000,0.1,9.08,,,0.49,360,36,73.5,360,0.545,,0.01,https://doi.org/10.3390/separations11030070
+Pectin,polyvinylidene fluoride (PVDF),0.0004166667,0.1,9.08,,,0.49,360,15,30.6,360,0.227,,0.01,https://doi.org/10.3390/separations11030070
+Pectin,polytetrafluoroethylene (PTFE),0.0007777778,0.1,9.08,,,0.49,360,28,57.1,360,0.424,,0.01,https://doi.org/10.3390/separations11030070
+Pectin,polytetrafluoroethylene (PTFE),0.0003333333,0.1,9.08,,,0.49,360,12,24.5,360,0.182,,0.01,https://doi.org/10.3390/separations11030070
+Xanthan Gum,polyvinylidene fluoride (PVDF),0.0005000000,0.1,9.08,,,0.49,360,18,36.7,360,0.272,,0.001,https://doi.org/10.3390/separations11030070
+Xanthan Gum,polyvinylidene fluoride (PVDF),0.0006111111,0.1,9.08,,,0.49,360,22,44.9,360,0.333,,0.001,https://doi.org/10.3390/separations11030070
+BSA,polycarbonate (PC),0.00765,0.2,4.9,100,225,0.14,1260,275.5,9000,1260,2.25,9.00E+15,0.5,https://doi.org/10.1006/jcis.2000.7231
+BSA,polycarbonate (PC),0.00561,0.2,4.9,100,165,0.14,1260,202,9000,1260,1.65,9.00E+15,1,https://doi.org/10.1006/jcis.2000.7231
+BSA,polycarbonate (PC),0.00442,0.2,4.9,100,130,0.14,1260,159.2,9000,1260,1.3,9.00E+15,1.4,https://doi.org/10.1006/jcis.2000.7231
+BSA,polycarbonate (PC),0.00333,0.2,4.9,100,98,0.14,1260,120,9000,1260,0.98,9.00E+15,2,https://doi.org/10.1006/jcis.2000.7231
+BSA,polycarbonate (PC),0.00197,0.2,4.9,100,58,0.14,1260,71,9000,1260,0.58,9.00E+15,5,https://doi.org/10.1006/jcis.2000.7231
+BSA,polycarbonate (PC),0.00245,0.2,4.9,100,72,0.055,504,88.2,9164,504,0.72,3.50E+15,2,https://doi.org/10.1006/jcis.2000.7231
+BSA,polycarbonate (PC),0.00381,0.2,4.9,100,112,0.28,2520,137.1,9000,2520,1.12,1.60E+16,2,https://doi.org/10.1006/jcis.2000.7231
+BSA,polycarbonate (PC),0.00435,0.2,4.9,100,128,0.55,5040,156.7,9164,5040,1.28,2.80E+16,2,https://doi.org/10.1006/jcis.2000.7231
+BSA,polycarbonate (PC),0.00227,0.2,4.9,300,200,0.14,1260,81.6,9000,1260,0.67,9.00E+15,2,https://doi.org/10.1006/jcis.2000.7231
+Lysozyme,aluminum,0.033,0.1,1,100,198,2,,1188,594,,1.98,,0.5,https://doi.org/10.1016/j.memsci.2023.122361
+Lysozyme,aluminum,0.01917,0.1,1,100,115,2,,690,345,,1.15,,0.5,https://doi.org/10.1016/j.memsci.2023.122361
+Lysozyme,aluminum,0.016,0.1,1,100,96,2,,576,288,,0.96,,0.5,https://doi.org/10.1016/j.memsci.2023.122361
+Lysozyme,aluminum,0.01867,0.1,1,100,112,2,,672,336,,1.12,,0.5,https://doi.org/10.1016/j.memsci.2023.122361
+Lysozyme,aluminum,0.01033,0.1,1,100,62,2,,372,186,,0.62,,0.5,https://doi.org/10.1016/j.memsci.2023.122361
+BSA,polypropylene (PP),0.000672,0.05 x 0.125,13.4,,10,1,77,24.2,77,77,,,1,https://doi.org/10.1016/S0376-7388(01)00445-8
+BSA,polypropylene (PP),0.000747,0.05 x 0.125,13.4,,10,1,75.2,26.9,75.2,75.2,,,1,https://doi.org/10.1016/S0376-7388(01)00445-8
+BSA,polypropylene (PP),0.000772,0.05 x 0.125,13.4,,10,1,69.9,27.8,69.9,69.9,,,1,https://doi.org/10.1016/S0376-7388(01)00445-8
+BSA,polypropylene (PP),0.000797,0.05 x 0.125,13.4,,10,1,68.1,28.7,68.1,68.1,,,1,https://doi.org/10.1016/S0376-7388(01)00445-8
+BSA,polypropylene (PP),0.001044,0.05 x 0.125,13.4,,10,1,66.3,37.6,66.3,66.3,,,1,https://doi.org/10.1016/S0376-7388(01)00445-8
+BSA,polypropylene (PP),0.001211,0.05 x 0.125,13.4,,10,1,68.6,43.6,68.6,68.6,,,1,https://doi.org/10.1016/S0376-7388(01)00445-8
+BSA,polypropylene (PP),0.001244,0.05 x 0.125,13.4,,10,1,60.9,44.8,60.9,60.9,,,1,https://doi.org/10.1016/S0376-7388(01)00445-8
+BSA,cellulose,,0.015,100,,1000,0.3,,,,,,,5,https://doi.org/10.1016/j.memsci.2004.02.015
+BSA,cellulose,,0.015,100,,1000,0.3,,,,,,,5,https://doi.org/10.1016/j.memsci.2004.02.015
+BSA,cellulose,,0.015,100,,1000,0.3,,,,,,,5,https://doi.org/10.1016/j.memsci.2004.02.015
+BSA,cellulose,,0.015,100,,1000,0.3,,,,,,,5,https://doi.org/10.1016/j.memsci.2004.02.015
+BSA,cellulose,,0.035,100,,1000,0.3,,,,,,,5,https://doi.org/10.1016/j.memsci.2004.02.015
+BSA,cellulose,,0.035,100,,1000,0.3,,,,,,,5,https://doi.org/10.1016/j.memsci.2004.02.015
+BSA,cellulose,,0.035,100,,1000,0.3,,,,,,,5,https://doi.org/10.1016/j.memsci.2004.02.015
+BSA,cellulose,,0.035,100,,1000,0.3,,,,,,,5,https://doi.org/10.1016/j.memsci.2004.02.015
+BSA,cellulose,,0.075,100,,1000,0.3,,,,,,,5,https://doi.org/10.1016/j.memsci.2004.02.015
+BSA,cellulose,,0.075,100,,1000,0.3,,,,,,,5,https://doi.org/10.1016/j.memsci.2004.02.015
+BSA,cellulose,,0.075,100,,1000,0.3,,,,,,,5,https://doi.org/10.1016/j.memsci.2004.02.015
+BSA,cellulose,,0.075,100,,1000,0.3,,,,,,,5,https://doi.org/10.1016/j.memsci.2004.02.015
+Silica,polyethersulfone (PES),,0.22,13.8,60,165,0.5,180,,,180,2.75,,1,https://doi.org/10.1016/j.memsci.2022.120265
+Silica,polyethersulfone (PES),,0.22,13.8,60,142,0.5,180,,,180,2.37,,1,https://doi.org/10.1016/j.memsci.2022.120265
+Silica,polyethersulfone (PES),,0.22,13.8,60,118,0.5,180,,,180,1.97,,1,https://doi.org/10.1016/j.memsci.2022.120265
+Silica,polyethersulfone (PES),,0.22,13.8,60,295,1,350,,,350,4.92,,1,https://doi.org/10.1016/j.memsci.2022.120265
+Silica,polyethersulfone (PES),,0.22,13.8,60,198,1,350,,,350,3.3,,1,https://doi.org/10.1016/j.memsci.2022.120265
+BSA,polyvinylidene fluoride (PVDF),,0.1,14.2,120,285,1,150,,,150,2.38,,0.5,https://doi.org/10.1016/j.memsci.2017.08.013
+BSA,polyvinylidene fluoride (PVDF),,0.1,14.2,120,220,1,145,,,145,1.83,,2,https://doi.org/10.1016/j.memsci.2017.08.013
+BSA,polyvinylidene fluoride (PVDF),,0.1,14.2,120,160,1,140,,,140,1.33,,5,https://doi.org/10.1016/j.memsci.2017.08.013
+BSA,polyvinylidene fluoride (PVDF),,0.1,14.2,120,135,0.5,75,,,75,1.13,,2,https://doi.org/10.1016/j.memsci.2017.08.013
+BSA,polyvinylidene fluoride (PVDF),,0.1,14.2,120,280,1.5,215,,,215,2.33,,2,https://doi.org/10.1016/j.memsci.2017.08.013
+Yeast,polypropylene (PP),,0.4,25,90,280,0.8,210,,,210,3.11,,1.5,https://doi.org/10.1016/j.memsci.2014.06.052
+Yeast,polypropylene (PP),,0.4,25,90,420,0.8,210,,,210,4.67,,1.5,https://doi.org/10.1016/j.memsci.2014.06.052
+Yeast,polypropylene (PP),,0.4,25,90,350,0.8,210,,,210,3.89,,1.5,https://doi.org/10.1016/j.memsci.2014.06.052
+Clay Powder in Water,polypropylene (PP),,0.4,25,90,310,0.8,210,,,210,3.44,,2,https://doi.org/10.1016/j.memsci.2014.06.052
+Clay Powder in Water,polypropylene (PP),,0.4,25,90,445,0.8,210,,,210,4.94,,2,https://doi.org/10.1016/j.memsci.2014.06.052
+Water with Bacteria,polyethersulfone (PES),,0.2,12.5,45,62,0.3,82,,,82,1.38,,0.8,https://doi.org/10.1016/j.memsci.2016.07.039
+Water with Bacteria,polyethersulfone (PES),,0.2,12.5,45,110,0.6,160,,,160,2.44,,0.8,https://doi.org/10.1016/j.memsci.2016.07.039
+Water with Bacteria,polyethersulfone (PES),,0.2,12.5,45,155,1,265,,,265,3.44,,0.8,https://doi.org/10.1016/j.memsci.2016.07.039
+Water with Bacteria,polyethersulfone (PES),,0.2,12.5,45,78,0.6,160,,,160,1.73,,1.5,https://doi.org/10.1016/j.memsci.2016.07.039
+Water with Bacteria,polycarbonate (PC),,0.4,10,60,58,0.3,120,,,120,0.97,,0.5,https://doi.org/10.1016/j.memsci.2009.08.027
+Water with Bacteria,polycarbonate (PC),,0.4,10,60,90,0.5,195,,,195,1.5,,0.5,https://doi.org/10.1016/j.memsci.2009.08.027
+Water with Bacteria,polycarbonate (PC),,0.4,10,60,132,0.8,310,,,310,2.2,,0.5,https://doi.org/10.1016/j.memsci.2009.08.027
+Water with Bacteria,polycarbonate (PC),,0.4,10,60,62,0.5,195,,,195,1.03,,1,https://doi.org/10.1016/j.memsci.2009.08.027
+Yeast,cellulose esters,,0.45,16.88,30,108,0.5,225,,,225,3.6,,78,https://doi.org/10.3390/membranes11020089
+Yeast,cellulose esters,,0.45,16.88,30,95,0.5,225,,,225,3.17,,78,https://doi.org/10.3390/membranes11020089
+Yeast,cellulose esters,,0.45,16.88,30,85,0.5,225,,,225,2.83,,78,https://doi.org/10.3390/membranes11020089
+Yeast,cellulose esters,,0.45,16.88,30,72,0.5,225,,,225,2.4,,78,https://doi.org/10.3390/membranes11020089
+Yeast,cellulose esters,,0.45,16.88,30,58,0.5,225,,,225,1.93,,78,https://doi.org/10.3390/membranes11020089
+Misc Organic Matter,polyethersulfone (PES),,0.2,19.6,40,115,0.5,140,,,140,2.88,,3.2,https://doi.org/10.1016/j.memsci.2010.09.032
+Misc Organic Matter,polyethersulfone (PES),,0.2,19.6,40,180,1.2,280,,,280,4.5,,3.2,https://doi.org/10.1016/j.memsci.2010.09.032
+Misc Organic Matter,polyethersulfone (PES),,0.2,19.6,40,240,2,420,,,420,6,,3.2,https://doi.org/10.1016/j.memsci.2010.09.032
+Misc Organic Matter,polyethersulfone (PES),,0.2,100,40,820,1.2,260,,,260,20.5,,3.2,https://doi.org/10.1016/j.memsci.2010.09.032
+BSA,polysulfone (PS),,0.1,14.8,90,175,0.75,130,,,130,1.94,,1,https://doi.org/10.1016/j.jiec.2022.02.025
+BSA,polysulfone (PS),,0.1,14.8,90,155,0.75,130,,,130,1.72,,1,https://doi.org/10.1016/j.jiec.2022.02.025
+BSA,polysulfone (PS),,0.1,14.8,90,140,0.75,130,,,130,1.56,,1,https://doi.org/10.1016/j.jiec.2022.02.025
+BSA,polysulfone (PS),,0.1,14.8,90,118,0.75,130,,,130,1.31,,1,https://doi.org/10.1016/j.jiec.2022.02.025
+BSA,polysulfone (PS),,0.1,14.8,90,195,1.2,208,,,208,2.17,,1,https://doi.org/10.1016/j.jiec.2022.02.025
+Silica,polyethersulfone (PES),0.003321,0.22,13.8,60,165,0.5,180,119.6,239.2,180,2.75,2.50E+11,1,https://doi.org/10.1016/j.memsci.2022.120265
+Silica,polyethersulfone (PES),0.002862,0.22,13.8,60,142,0.5,180,102.9,205.8,180,2.37,4.80E+11,1,https://doi.org/10.1016/j.memsci.2022.120265
+Silica,polyethersulfone (PES),0.002379,0.22,13.8,60,118,0.5,180,85.5,171,180,1.97,8.20E+11,1,https://doi.org/10.1016/j.memsci.2022.120265
+Silica,polyethersulfone (PES),0.005942,0.22,13.8,60,295,1,350,213.8,213.8,350,4.92,1.80E+11,1,https://doi.org/10.1016/j.memsci.2022.120265
+Silica,polyethersulfone (PES),0.003986,0.22,13.8,60,198,1,350,143.5,143.5,350,3.3,6.50E+11,1,https://doi.org/10.1016/j.memsci.2022.120265
+BSA,polyvinylidene fluoride (PVDF),0.002793,0.1,14.2,120,285,1,150,100.4,100.4,150,2.38,3.20E+12,0.5,https://doi.org/10.1016/j.memsci.2017.08.013
+BSA,polyvinylidene fluoride (PVDF),0.002148,0.1,14.2,120,220,1,145,77.5,77.5,145,1.83,1.10E+13,2,https://doi.org/10.1016/j.memsci.2017.08.013
+BSA,polyvinylidene fluoride (PVDF),0.001561,0.1,14.2,120,160,1,140,56.3,56.3,140,1.33,2.80E+13,5,https://doi.org/10.1016/j.memsci.2017.08.013
+BSA,polyvinylidene fluoride (PVDF),0.001326,0.1,14.2,120,135,0.5,75,47.5,95,75,1.13,8.50E+12,2,https://doi.org/10.1016/j.memsci.2017.08.013
+BSA,polyvinylidene fluoride (PVDF),0.002735,0.1,14.2,120,280,1.5,215,98.6,65.7,215,2.33,1.50E+13,2,https://doi.org/10.1016/j.memsci.2017.08.013
+Yeast,polypropylene (PP),0.002073,0.4,25,90,280,0.8,210,74.7,93.4,210,3.11,5.40E+11,1.5,https://doi.org/10.1016/j.memsci.2014.06.052
+Yeast,polypropylene (PP),0.003113,0.4,25,90,420,0.8,210,112,140,210,4.67,2.10E+11,1.5,https://doi.org/10.1016/j.memsci.2014.06.052
+Yeast,polypropylene (PP),0.002593,0.4,25,90,350,0.8,210,93.3,116.6,210,3.89,3.50E+11,1.5,https://doi.org/10.1016/j.memsci.2014.06.052
+Clay Powder in Water,polypropylene (PP),0.002293,0.4,25,90,310,0.8,210,82.7,103.4,210,3.44,4.20E+11,2,https://doi.org/10.1016/j.memsci.2014.06.052
+Clay Powder in Water,polypropylene (PP),0.003293,0.4,25,90,445,0.8,210,118.7,148.4,210,4.94,1.80E+11,2,https://doi.org/10.1016/j.memsci.2014.06.052
+Water with Bacteria,polyethersulfone (PES),0.00184,0.2,12.5,45,62,0.3,82,66.1,220.3,82,1.38,1.20E+12,0.8,https://doi.org/10.1016/j.memsci.2016.07.039
+Water with Bacteria,polyethersulfone (PES),0.003253,0.2,12.5,45,110,0.6,160,117.3,195.5,160,2.44,1.80E+12,0.8,https://doi.org/10.1016/j.memsci.2016.07.039
+Water with Bacteria,polyethersulfone (PES),0.004587,0.2,12.5,45,155,1,265,165.3,165.3,265,3.44,2.90E+12,0.8,https://doi.org/10.1016/j.memsci.2016.07.039
+Water with Bacteria,polyethersulfone (PES),0.002307,0.2,12.5,45,78,0.6,160,83.2,138.7,160,1.73,4.10E+12,1.5,https://doi.org/10.1016/j.memsci.2016.07.039
+Water with Bacteria,polycarbonate (PC),0.001617,0.4,10,60,58,0.3,120,58,193.3,120,0.97,8.50E+11,0.5,https://doi.org/10.1016/j.memsci.2009.08.027
+Water with Bacteria,polycarbonate (PC),0.0025,0.4,10,60,90,0.5,195,90,180,195,1.5,1.40E+12,0.5,https://doi.org/10.1016/j.memsci.2009.08.027
+Water with Bacteria,polycarbonate (PC),0.003667,0.4,10,60,132,0.8,310,132,165,310,2.2,2.20E+12,0.5,https://doi.org/10.1016/j.memsci.2009.08.027
+Water with Bacteria,polycarbonate (PC),0.001717,0.4,10,60,62,0.5,195,62,124,195,1.03,3.60E+12,1,https://doi.org/10.1016/j.memsci.2009.08.027
+Yeast,cellulose esters,0.003555,0.45,16.88,30,108,0.5,225,128,256,225,3.6,3.80E+11,78,https://doi.org/10.3390/membranes11020089
+Yeast,cellulose esters,0.00313,0.45,16.88,30,95,0.5,225,112.6,225.2,225,3.17,4.50E+11,78,https://doi.org/10.3390/membranes11020089
+Yeast,cellulose esters,0.002794,0.45,16.88,30,85,0.5,225,100.7,201.4,225,2.83,5.30E+11,78,https://doi.org/10.3390/membranes11020089
+Yeast,cellulose esters,0.00237,0.45,16.88,30,72,0.5,225,85.3,170.6,225,2.4,6.70E+11,78,https://doi.org/10.3390/membranes11020089
+Yeast,cellulose esters,0.001906,0.45,16.88,30,58,0.5,225,68.7,137.4,225,1.93,8.90E+11,78,https://doi.org/10.3390/membranes11020089
+Misc Organic Matter,polyethersulfone (PES),0.002449,0.2,19.6,40,115,0.5,140,88,176,140,2.88,1.50E+12,3.2,https://doi.org/10.1016/j.memsci.2010.09.032
+Misc Organic Matter,polyethersulfone (PES),0.003827,0.2,19.6,40,180,1.2,280,137.8,114.8,280,4.5,2.40E+12,3.2,https://doi.org/10.1016/j.memsci.2010.09.032
+Misc Organic Matter,polyethersulfone (PES),0.005102,0.2,19.6,40,240,2,420,183.7,91.8,420,6,3.80E+12,3.2,https://doi.org/10.1016/j.memsci.2010.09.032
+Misc Organic Matter,polyethersulfone (PES),0.003417,0.2,100,40,820,1.2,260,123,102.5,260,20.5,2.70E+12,3.2,https://doi.org/10.1016/j.memsci.2010.09.032
+BSA,polysulfone (PS),0.002185,0.1,14.8,90,175,0.75,130,78.8,105.1,130,1.94,4.20E+12,1,https://doi.org/10.1016/j.jiec.2022.02.025
+BSA,polysulfone (PS),0.001937,0.1,14.8,90,155,0.75,130,69.8,93.1,130,1.72,5.10E+12,1,https://doi.org/10.1016/j.jiec.2022.02.025
+BSA,polysulfone (PS),0.001757,0.1,14.8,90,140,0.75,130,63.1,84.1,130,1.56,6.00E+12,1,https://doi.org/10.1016/j.jiec.2022.02.025
+BSA,polysulfone (PS),0.001475,0.1,14.8,90,118,0.75,130,53.2,70.9,130,1.31,7.80E+12,1,https://doi.org/10.1016/j.jiec.2022.02.025
+BSA,polysulfone (PS),0.002444,0.1,14.8,90,195,1.2,208,87.8,73.2,208,2.17,8.50E+12,1,https://doi.org/10.1016/j.jiec.2022.02.025
+Silica,polyethersulfone (PES),0.00372,0.2,13.8,60,185,0.5,210,134.1,268.2,210,3.08,3.10E+11,0.5,https://doi.org/10.1016/j.memsci.2015.06.047
+Silica,polyethersulfone (PES),0.002512,0.2,13.8,60,125,0.5,210,90.6,181.2,210,2.08,6.20E+11,0.5,https://doi.org/10.1016/j.memsci.2015.06.047
+Silica,polyethersulfone (PES),0.001969,0.2,13.8,60,98,0.5,210,71,142,210,1.63,9.50E+11,0.5,https://doi.org/10.1016/j.memsci.2015.06.047
+Silica,polyethersulfone (PES),0.006244,0.2,13.8,60,310,1,415,224.6,224.6,415,5.17,2.80E+11,0.5,https://doi.org/10.1016/j.memsci.2015.06.047
+TiO2 Nanoparticles,polyvinylidene fluoride (PVDF),0.001984,0.1,14.2,90,152,0.8,190,71.4,89.2,190,1.69,8.20E+11,0.2,https://doi.org/10.1016/j.memsci.2016.05.043
+TiO2 Nanoparticles,polyvinylidene fluoride (PVDF),0.002805,0.1,14.2,90,215,0.8,190,100.9,126.1,190,2.39,4.10E+11,0.2,https://doi.org/10.1016/j.memsci.2016.05.043
+TiO2 Nanoparticles,polyvinylidene fluoride (PVDF),0.001538,0.1,14.2,90,118,0.8,190,55.4,69.2,190,1.31,1.20E+12,0.2,https://doi.org/10.1016/j.memsci.2016.05.043
+Water with Bacteria,polyethersulfone (PES),0.001889,0.22,15,50,85,0.4,140,68,170,140,1.7,1.80E+12,0.6,https://doi.org/10.1016/j.memsci.2017.05.021
+Water with Bacteria,polyethersulfone (PES),0.003156,0.22,15,50,142,0.8,275,113.6,142,275,2.84,2.60E+12,0.6,https://doi.org/10.1016/j.memsci.2017.05.021
+Water with Bacteria,polyethersulfone (PES),0.004178,0.22,15,50,188,1.2,410,150.4,125.3,410,3.76,3.90E+12,0.6,https://doi.org/10.1016/j.memsci.2017.05.021
+Water with Bacteria,polyethersulfone (PES),0.002333,0.22,15,50,105,0.8,275,84,105,275,2.1,4.80E+12,1.2,https://doi.org/10.1016/j.memsci.2017.05.021
+BSA,cellulose acetate (CA),0.002778,0.2,12,60,120,0.45,100,100,222.2,100,2,1.50E+12,1,https://doi.org/10.1016/j.memsci.2008.04.017
+BSA,cellulose acetate (CA),0.005,0.2,12,60,216,0.95,180,180,189.5,180,3.6,2.80E+12,1,https://doi.org/10.1016/j.memsci.2008.04.017
+Lysozyme,cellulose acetate (CA),0.004167,0.2,12,60,180,0.35,150,150,428.6,150,3,8.50E+11,1,https://doi.org/10.1016/j.memsci.2008.04.017
+Latex,polyethersulfone (PES),0.002947,0.1,13.8,80,195,0.5,220,106,212,220,2.44,3.50E+11,0.05,https://doi.org/10.1016/j.ces.2014.09.052
+Latex,polyethersulfone (PES),0.003333,0.1,13.8,80,221,0.65,120,120.1,184.8,120,2.76,2.90E+11,0.05,https://doi.org/10.1016/j.ces.2014.09.052
+Latex,polyethersulfone (PES),0.001691,0.1,13.8,80,112,0.5,220,60.9,121.8,220,1.4,9.20E+11,0.2,https://doi.org/10.1016/j.ces.2014.09.052
+Yeast,polyvinylidene fluoride (PVDF),0.002667,0.22,16,45,115,0.3,160,95.8,319.3,160,2.56,3.20E+11,0.5,https://doi.org/10.1016/j.memsci.2017.04.064
+Yeast,polyvinylidene fluoride (PVDF),0.004583,0.22,16,45,198,0.6,310,165,275,310,4.4,4.50E+11,0.5,https://doi.org/10.1016/j.memsci.2017.04.064
+Yeast,polyvinylidene fluoride (PVDF),0.002823,0.22,16,45,122,0.6,310,101.7,169.5,310,2.71,1.10E+12,2,https://doi.org/10.1016/j.memsci.2017.04.064
+Misc Organic Matter,polyethersulfone (PES),0.001667,0.1,20,120,240,0.4,60,60,150,60,2,1.80E+12,0.15,https://doi.org/10.1002/ceat.201700117
+Misc Organic Matter,polyethersulfone (PES),0.002775,0.1,20,120,400,0.85,100,100,117.6,100,3.33,3.20E+12,0.15,https://doi.org/10.1002/ceat.201700117
+Misc Organic Matter,polyethersulfone (PES),0.002775,0.1,20,120,400,0.42,100,100,238.1,100,3.33,1.20E+12,0.25,https://doi.org/10.1002/ceat.201700117
+Calcium Carbonate Slurry,cellulose esters,0.00364,0.45,12.5,30,82,0.5,280,131.2,262.4,280,2.73,2.20E+11,1,https://doi.org/10.5564/pmas.v62i04.2678
+Calcium Carbonate Slurry,cellulose esters,0.006133,0.45,12.5,30,138,1,540,220.8,220.8,540,4.6,3.10E+11,1,https://doi.org/10.5564/pmas.v62i04.2678
+Calcium Carbonate Slurry,cellulose esters,0.003907,0.45,12.5,30,88,1,540,140.8,140.8,540,2.93,6.80E+11,3,https://doi.org/10.5564/pmas.v62i04.2678

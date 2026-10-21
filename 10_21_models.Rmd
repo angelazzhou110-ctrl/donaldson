@@ -1,0 +1,95 @@
+---
+title: "models_10_21"
+output: html_document
+date: "2026-10-21"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(tidyr)
+```
+
+## Data Cleaning
+
+
+```{r}
+raw_data <- read.csv("scraped_database.csv", row.names = NULL)
+
+clean_df <- raw_data |>
+  select(-"Mean_flow_resistance")
+
+#converting columns to numeric
+i <- c(3:14)
+clean_df[, i] <- apply(clean_df[, i], 2, function(x) as.numeric(as.character(x)))
+                 
+sapply(df, class)
+
+#na count table
+clean_df |>
+  summarize(across(everything(), ~ sum(is.na(.)))) |>
+  pivot_longer(Solution:Source, 
+               names_to = "column", 
+               values_to = "na_count") |>
+  arrange(desc(na_count))
+
+#encoding pore size
+pore_sizes <- c(0.014, 0.040, 0.100, 0.200, 0.220, 0.300, 0.400, 0.450)
+clean_df$pore_size_encoded <- as.integer(factor(clean_df$Pore_size, levels = pore_sizes, ordered = TRUE))
+
+```
+
+### Modeling just complete rows
+
+Since we have 89 observations that are not missing any values, we can try modeling on just those rows.
+
+```{r}
+no_na <- clean_df |>
+  drop_na() |>
+  select(-Source, -Pore_size)
+no_na[3:14] <- scale(no_na[3:14], center = TRUE, scale = TRUE)
+
+```
+
+Using all predictors, we get an R^2 of 1. Based on the p-values, it seems that Volumetric flux may be too similar to filter loading.
+```{r}
+#linear model with all pred
+m1 <- lm(Filter_loading~., no_na)
+summary(m1)
+
+```
+
+Removing filter loading, we get the following model, with an R^2 of 0.932
+```{r}
+#linear model with all pred but volumetric_flux
+m2 <- lm(Filter_loading~.-Volumetric_Flux, no_na)
+summary(m2)
+```
+
+
+Using just the signifigant predictors from the previous model, we get an R^2 of 0.8231
+```{r}
+#lm with just signif pred
+m3 <- lm(Filter_loading~
+           Effective_Area + 
+           Duration +
+           Volume + 
+           Pressure.drop +
+           Permiability + 
+           Flow_Rate, 
+         no_na)
+summary(m3)
+```
+We can test these models with the lab data in the future, but it is worth considering whether they truly take the set up into account or whether they are just approximating filter loading.
+
+## Coverage of no_na
+
+```{r}
+no_na |> 
+  count(Solution, name = "count") |>
+  arrange(desc(count))
+no_na |> 
+  count(Filter_material, name = "count")|>
+  arrange(desc(count))
+```
+From these two tables, we can see that somthing like the lab data is represented in our dataset: we have 11 rows of "Misc Organic Matter" that could be similar to the green tea solution. Also, we have 28 rows of polyethersulfone, which matches what we have in the lab. 
