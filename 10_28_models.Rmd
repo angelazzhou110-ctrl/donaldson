@@ -1,0 +1,239 @@
+---
+title: "10_28_models"
+output: html_document
+date: "2026-10-28"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+install.packages("caret")
+install.packages("patchwork")
+```
+
+
+```{r}
+library(dplyr)
+library(tidyr)
+library(caret)
+library(patchwork)
+```
+
+
+## Working model
+```{r}
+raw_data <- read.csv("scraped_database_10_25.csv", row.names = NULL)
+
+clean_df <- raw_data |>
+  select(-"Solution..breif.description.", 
+         -"Filter.material", 
+         -"Mean.flow.resistance..m.kg.")
+
+names(clean_df) <- c("Solution", 
+                     "Filter_material", 
+                     "Filter_loading",
+                     "Pore_size",
+                     "Effective_Area", 
+                     "Duration",
+                     "Volume",
+                     "Pressure_drop",
+                     "Max_Flux",
+                     "Volumetric_Flux",
+                     "Permiability",
+                     "Starting_Flux",
+                     "Flow_Rate",
+                     "Concentration",
+                     "Source")
+
+#converting columns to numeric
+i <- c(3:14)
+clean_df[, i] <- apply(clean_df[, i], 2, function(x) as.numeric(as.character(x)))
+                 
+sapply(clean_df, class)
+
+#encoding pore size
+pore_sizes <- c(0.014, 0.040, 0.100, 0.200, 0.220, 0.300, 0.400, 0.450)
+clean_df$pore_size_encoded <- as.integer(factor(clean_df$Pore_size, levels = pore_sizes, ordered = TRUE))
+
+#dataset with na dropped
+no_na <- clean_df |>
+  drop_na() |>
+  select(-Pore_size)
+no_na[3:13, 15] <- scale(no_na[3:13, 15], center = TRUE, scale = TRUE)
+
+#working dataset
+dummy <- dummyVars(" ~ .", data=select(no_na, -Source))
+working_df <- data.frame(predict(dummy, newdata=select(no_na, -Source)))
+working_df$Source <- no_na$Source
+
+#working model
+working_model <- lm(Filter_loading~
+           Effective_Area + 
+           Duration +
+           Volume + 
+           Pressure_drop +
+           Permiability + 
+           Flow_Rate, 
+         no_na)
+```
+## Feature selection
+
+```{r}
+# preform feature selection for multiple linear regression, Gamma GLM, Gaussian GLM
+# Making Test/Training sets
+set.seed(123)
+trainIndex <- createDataPartition(working_df$Filter_loading, p = 0.7, list = FALSE)
+
+train <- working_df[trainIndex, ]
+test  <- working_df[-trainIndex, ]
+
+x_train <- train[, !(names(train) %in% c("Filter_loading", "Source", "Volumetric_Flux"))]
+y_train <- train$Filter_loading
+
+x_test  <- test[, !(names(test) %in% c("Filter_loading", "Source", "Volumetric_Flux"))]
+y_test  <- test$Filter_loading  # Fixed y_train -> y_test typo
+
+nzv <- nearZeroVar(x_train)
+if (length(nzv) > 0) {
+  x_train <- x_train[, -nzv]
+  x_test  <- x_test[, -nzv]
+}
+
+# B. Remove Exact Linear Combinations / Dependencies
+lin_combos <- findLinearCombos(x_train)
+if (!is.null(lin_combos$remove)) {
+  x_train <- x_train[, -lin_combos$remove]
+  x_test  <- x_test[, -lin_combos$remove]
+}
+
+# C. Remove Highly Correlated Predictors (|r| > 0.85)
+high_corr <- findCorrelation(cor(x_train, use = "pairwise.complete.obs"), cutoff = 0.85)
+if (length(high_corr) > 0) {
+  x_train <- x_train[, -high_corr]
+  x_test  <- x_test[, -high_corr]
+}
+
+
+get_glm_rfe_funcs <- function(fam) {
+  funcs <- lmFuncs
+  
+  # Fit GLM with specified family
+  funcs$fit <- function(x, y, first, last, ...) {
+    dat <- as.data.frame(x)
+    dat$y <- y
+    glm(y ~ ., data = dat, family = fam, ...)
+  }
+  
+  # Predict on response scale
+  funcs$pred <- function(object, x) {
+    predict(object, newdata = as.data.frame(x), type = "response")
+  }
+  
+  # Rank variables by absolute z-statistic or t-statistic magnitude
+  funcs$rank <- function(object, x, y) {
+    coef_mat <- summary(object)$coefficients
+    coef_mat <- coef_mat[rownames(coef_mat) != "(Intercept)", , drop = FALSE]
+    
+    stat_col <- grep("(z|t) value", colnames(coef_mat), value = TRUE)[1]
+    importance <- abs(coef_mat[, stat_col])
+    
+    vimp <- data.frame(
+      Overall = importance,
+      var = names(importance)
+    )
+    vimp[order(vimp$Overall, decreasing = TRUE), ]
+  }
+  
+  return(funcs)
+}
+
+subsets <- 1:ncol(x_train)
+
+# ----------------------------------------------------
+# Model 1: Multiple Linear Regression (OLS)
+# ----------------------------------------------------
+ctrl_lm <- rfeControl(functions = lmFuncs, method = "cv", number = 10)
+
+rfe_lm <- rfe(
+  x = x_train,
+  y = y_train,
+  sizes = subsets,
+  rfeControl = ctrl_lm,
+  metric = "Rsquared"
+)
+
+# ----------------------------------------------------
+# Model 2: Gaussian GLM (Identity Link)
+# ----------------------------------------------------
+ctrl_gaussian <- rfeControl(
+  functions = get_glm_rfe_funcs(gaussian(link = "identity")),
+  method = "cv",
+  number = 10
+)
+
+rfe_gaussian <- rfe(
+  x = x_train,
+  y = y_train,
+  sizes = subsets,
+  rfeControl = ctrl_gaussian,
+  metric = "Rsquared"
+)
+
+# ----------------------------------------------------
+# Model 3: Gamma GLM (Log Link - Requires y > 0)
+# ----------------------------------------------------
+ctrl_gamma <- rfeControl(
+  functions = get_glm_rfe_funcs(Gamma(link = "log")),
+  method = "cv",
+  number = 10
+)
+
+rfe_gamma <- rfe(
+  x = x_train,
+  y = y_train,
+  sizes = subsets,
+  rfeControl = ctrl_gamma,
+  metric = "Rsquared"
+)
+
+# ----------------------------------------------------
+# Extract Predictors & Evaluate on Test Set
+# ----------------------------------------------------
+cat("Selected Features (LM):", predictors(rfe_lm), "\n")
+cat("Selected Features (Gaussian GLM):", predictors(rfe_gaussian), "\n")
+cat("Selected Features (Gamma GLM):", predictors(rfe_gamma), "\n")
+
+# Evaluation function returning test set R-squared
+eval_metrics <- function(rfe_model, x_test, y_test) {
+  preds <- predict(rfe_model, x_test)
+  
+  # Handle prediction output structure safely
+  if (is.list(preds) || is.data.frame(preds)) {
+    if ("pred" %in% names(preds)) preds <- preds$pred
+  }
+  
+  # Calculate R-squared (squared Pearson correlation, matching caret default)
+  r_squared <- cor(preds, y_test, use = "pairwise.complete.obs")^2
+  
+  return(c(R2 = r_squared))
+}
+
+test_comparison <- data.frame(
+  LM           = eval_metrics(rfe_lm, x_test, y_test),
+  Gaussian_GLM = eval_metrics(rfe_gaussian, x_test, y_test),
+  Gamma_GLM    = eval_metrics(rfe_gamma, x_test, y_test)
+)
+
+print(test_comparison)
+```
+```{r}
+predictors(rfe_gamma)
+```
+```{r}
+plot(final_lm, which = 1)
+
+# Optional: View all 4 standard regression diagnostic plots
+par(mfrow = c(2, 2))
+plot(final_lm)
+par(mfrow = c(1, 1))
+```
+
