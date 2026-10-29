@@ -75,41 +75,215 @@ working_model <- lm(Filter_loading~
            Flow_Rate, 
          no_na)
 ```
+```{r}
+set.seed(123)
+
+# ----------------------------------------------------
+# 1. Preprocessing & Feature Filtering
+# ----------------------------------------------------
+# Remove redundant columns
+df <- select(working_df, -Source, -Volumetric_Flux)
+
+# A. Remove Near-Zero Variance Predictors
+nzv <- nearZeroVar(df)
+if (length(nzv) > 0) {
+  df <- df[, -nzv]
+}
+
+# B. Remove Exact Linear Combinations / Dependencies
+lin_combos <- findLinearCombos(df)
+if (!is.null(lin_combos$remove)) {
+  df <- df[, -lin_combos$remove]
+}
+
+# C. Remove Highly Correlated Predictors (|r| > 0.85) on Numeric Columns Only
+num_cols <- names(df)[sapply(df, is.numeric)]
+num_predictors <- setdiff(num_cols, "Filter_loading") # Exclude target
+
+if (length(num_predictors) > 1) {
+  corr_matrix <- cor(df[, num_predictors], use = "pairwise.complete.obs")
+  high_corr <- findCorrelation(corr_matrix, cutoff = 0.85)
+  
+  if (length(high_corr) > 0) {
+    cols_to_remove <- num_predictors[high_corr]
+    df <- df[, !names(df) %in% cols_to_remove]
+  }
+}
+
+# ----------------------------------------------------
+# 2. Custom GLM RFE Helper Function
+# ----------------------------------------------------
+get_glm_rfe_funcs <- function(fam) {
+  funcs <- lmFuncs
+  
+  funcs$fit <- function(x, y, first, last, ...) {
+    dat <- as.data.frame(x)
+    dat$y <- y
+    glm(y ~ ., data = dat, family = fam, ...)
+  }
+  
+  funcs$pred <- function(object, x) {
+    predict(object, newdata = as.data.frame(x), type = "response")
+  }
+  
+  funcs$rank <- function(object, x, y) {
+    coef_mat <- summary(object)$coefficients
+    coef_mat <- coef_mat[rownames(coef_mat) != "(Intercept)", , drop = FALSE]
+    
+    # Exclude any NA coefficients resulting from collinearity
+    coef_mat <- coef_mat[!is.na(coef_mat[, 1]), , drop = FALSE]
+    
+    stat_col <- grep("(z|t) value", colnames(coef_mat), value = TRUE)[1]
+    importance <- abs(coef_mat[, stat_col])
+    
+    vimp <- data.frame(
+      Overall = importance,
+      var = names(importance)
+    )
+    vimp[order(vimp$Overall, decreasing = TRUE), ]
+  }
+  
+  return(funcs)
+}
+
+# ----------------------------------------------------
+# 3. Train / Test Split
+# ----------------------------------------------------
+trainIndex <- createDataPartition(df$Filter_loading, p = 0.7, list = FALSE)
+
+train <- df[trainIndex, ]
+test  <- df[-trainIndex, ]
+
+x_train <- train[, !(names(train) %in% "Filter_loading")]
+y_train <- train$Filter_loading
+
+x_test  <- test[, !(names(test) %in% "Filter_loading")]
+y_test  <- test$Filter_loading  
+
+subsets <- 1:ncol(x_train)
+
+# ----------------------------------------------------
+# 4. Model Fitting via RFE
+# ----------------------------------------------------
+# Model 1: Multiple Linear Regression (OLS)
+ctrl_lm <- rfeControl(functions = lmFuncs, method = "cv", number = 10)
+rfe_lm  <- rfe(x = x_train, y = y_train, sizes = subsets, rfeControl = ctrl_lm, metric = "Rsquared")
+
+# Model 2: Gaussian GLM (Identity Link)
+ctrl_gaussian <- rfeControl(
+  functions = get_glm_rfe_funcs(gaussian(link = "identity")),
+  method = "cv",
+  number = 10
+)
+rfe_gaussian <- rfe(x = x_train, y = y_train, sizes = subsets, rfeControl = ctrl_gaussian, metric = "Rsquared")
+
+# Model 3: Gamma GLM (Log Link)
+ctrl_gamma <- rfeControl(
+  functions = get_glm_rfe_funcs(Gamma(link = "log")),
+  method = "cv",
+  number = 10
+)
+rfe_gamma <- rfe(x = x_train, y = y_train, sizes = subsets, rfeControl = ctrl_gamma, metric = "Rsquared")
+
+# ----------------------------------------------------
+# 5. Evaluate on Holdout Test Set
+# ----------------------------------------------------
+eval_metrics <- function(rfe_model, x_test, y_test) {
+  preds <- predict(rfe_model, x_test)
+  if (is.list(preds) || is.data.frame(preds)) {
+    if ("pred" %in% names(preds)) preds <- preds$pred
+  }
+  r_squared <- cor(preds, y_test, use = "pairwise.complete.obs")^2
+  return(c(R2 = r_squared))
+}
+
+test_comparison <- data.frame(
+  LM           = eval_metrics(rfe_lm, x_test, y_test),
+  Gaussian_GLM = eval_metrics(rfe_gaussian, x_test, y_test),
+  Gamma_GLM    = eval_metrics(rfe_gamma, x_test, y_test)
+)
+
+print(test_comparison)
+
+# ----------------------------------------------------
+# 6. Diagnostics
+# ----------------------------------------------------
+final_lm <- rfe_lm$fit
+
+par(mfrow = c(2, 2))
+plot(final_lm)
+par(mfrow = c(1, 1))
+
+# ----------------------------------------------------
+# 7. Corrected 3-Fold Cross-Validation Loop
+# ----------------------------------------------------
+set.seed(42)
+
+my_data <- df
+my_data$fold <- sample(rep(1:3, length.out = nrow(my_data)))
+
+three_fold <- function(rfe_model, data = my_data) {
+  selected_vars <- predictors(rfe_model)
+  formula <- as.formula(paste("Filter_loading ~", paste(selected_vars, collapse = " + ")))
+  
+  mse_results  <- numeric(3)
+  rmse_results <- numeric(3)
+  r2_results   <- numeric(3)
+  
+  for (k in 1:3) {
+    train_data <- subset(data, fold != k)
+    val_data   <- subset(data, fold == k)
+    
+    fold_model <- lm(formula, data = train_data)
+    
+    predictions <- predict(fold_model, newdata = val_data)
+    actuals     <- val_data$Filter_loading
+    
+    mse_results[k] <- mean((actuals - predictions)^2, na.rm = TRUE)
+    rmse_results[k] <- sqrt(mse_results[k])
+    r2_results[k] <- cor(actuals, predictions, use = "pairwise.complete.obs")^2
+  }
+  
+  cv_metrics <- c(
+    MSE  = mean(mse_results),
+    RMSE = mean(rmse_results),
+    R2   = mean(r2_results)
+  )
+  
+  cat("--- 3-Fold CV Results ---\n")
+  print(round(cv_metrics, 8))
+}
+
+three_fold(rfe_lm)
+three_fold(rfe_gaussian)
+three_fold(rfe_gamma)
+
+```
+
+
 ## Feature selection
 
 ```{r}
 # preform feature selection for multiple linear regression, Gamma GLM, Gaussian GLM
-# Making Test/Training sets
+
 set.seed(123)
-trainIndex <- createDataPartition(working_df$Filter_loading, p = 0.7, list = FALSE)
-
-train <- working_df[trainIndex, ]
-test  <- working_df[-trainIndex, ]
-
-x_train <- train[, !(names(train) %in% c("Filter_loading", "Source", "Volumetric_Flux"))]
-y_train <- train$Filter_loading
-
-x_test  <- test[, !(names(test) %in% c("Filter_loading", "Source", "Volumetric_Flux"))]
-y_test  <- test$Filter_loading  # Fixed y_train -> y_test typo
-
-nzv <- nearZeroVar(x_train)
+#removing redundant columns
+df <- select(working_df, -Source, -Volumetric_Flux)
+nzv <- nearZeroVar(df)
 if (length(nzv) > 0) {
-  x_train <- x_train[, -nzv]
-  x_test  <- x_test[, -nzv]
+  df <- df[, -nzv]
 }
 
 # B. Remove Exact Linear Combinations / Dependencies
-lin_combos <- findLinearCombos(x_train)
+lin_combos <- findLinearCombos(df)
 if (!is.null(lin_combos$remove)) {
-  x_train <- x_train[, -lin_combos$remove]
-  x_test  <- x_test[, -lin_combos$remove]
+  df <- df[, -lin_combos$remove]
 }
 
 # C. Remove Highly Correlated Predictors (|r| > 0.85)
-high_corr <- findCorrelation(cor(x_train, use = "pairwise.complete.obs"), cutoff = 0.85)
+high_corr <- findCorrelation(cor(df, use = "pairwise.complete.obs"), cutoff = 0.85)
 if (length(high_corr) > 0) {
-  x_train <- x_train[, -high_corr]
-  x_test  <- x_test[, -high_corr]
+  df <- df[, -high_corr]
 }
 
 
@@ -145,6 +319,17 @@ get_glm_rfe_funcs <- function(fam) {
   
   return(funcs)
 }
+#test/train spilt
+trainIndex <- createDataPartition(working_df$Filter_loading, p = 0.7, list = FALSE)
+
+train <- df[trainIndex, ]
+test  <- df[-trainIndex, ]
+
+x_train <- train[, !(names(train) %in% "Filter_loading")]
+y_train <- train$Filter_loading
+
+x_test  <- test[, !(names(train) %in% "Filter_loading")]
+y_test  <- test$Filter_loading  
 
 subsets <- 1:ncol(x_train)
 
@@ -235,5 +420,34 @@ plot(final_lm, which = 1)
 par(mfrow = c(2, 2))
 plot(final_lm)
 par(mfrow = c(1, 1))
+```
+
+### 3 fold validation
+```{r}
+set.seed(42)
+
+my_data <-df
+# 2. Assign each row to 1 of 3 folds
+my_data$fold <- sample(rep(1:3, length.out = nrow(my_data)))
+
+# 3. Store error metrics per fold (e.g., RMSE)
+rmse_results <- numeric(3)
+
+for (k in 1:3) {
+  train_data <- subset(my_data, fold != k)
+  val_data   <- subset(my_data, fold == k)
+  
+  # Refit using the formula from your existing model object
+  fold_model <- lm(formula(rfe_lm$fit), data = train_data)
+  
+  # Predict on validation fold
+  predictions <- predict(fold_model, newdata = val_data)
+  
+  # Calculate RMSE for fold k
+  rmse_results[k] <- sqrt(mean((val_data$y - predictions)^2))
+}
+
+# Average RMSE across 3 folds
+mean(rmse_results)
 ```
 
